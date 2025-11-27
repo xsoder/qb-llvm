@@ -9,7 +9,7 @@ on:
 
 jobs:
   install-pkgs:
-    name: Install needed packages
+    name: Build Entire Project
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout Repo
