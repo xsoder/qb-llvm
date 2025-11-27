@@ -1,0 +1,33 @@
+name: Linux Build - QB
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  install-pkgs:
+    name: Install needed packages
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Update and Install Packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang cmake llvm
+
+      - name: Build Project
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          make
+
+      - name: Display Build Output
+        run: |
+          cd build
+          make test

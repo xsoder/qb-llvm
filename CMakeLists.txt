@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5...4.0)
+cmake_minimum_required(VERSION 3.1...4.0)
 project(
   qb
   VERSION 0.0.1
