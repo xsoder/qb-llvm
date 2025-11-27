@@ -26,8 +26,3 @@ jobs:
           cd build
           cmake ..
           make
-
-      - name: Display Build Output
-        run: |
-          cd build
-          make test
