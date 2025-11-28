@@ -1,0 +1,7 @@
+extern "libc"
+
+main :: i32 {
+    printf("hello world\n");
+    return 0;
+}
+

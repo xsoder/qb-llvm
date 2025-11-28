@@ -18,11 +18,8 @@ jobs:
       - name: Update and Install Packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y clang cmake llvm
+          sudo apt-get install -y clang cmake llvm python
 
       - name: Build Project
         run: |
-          mkdir build
-          cd build
-          cmake ..
-          make
+          python3 build.py
